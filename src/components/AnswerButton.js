@@ -9,8 +9,10 @@ class AnswerButton extends React.Component {
   render() {
     return (
       <button
-        onClick={this.props.handleGuess}
-        className='btn btn-outline-primary'
+        onClick={() => {
+          this.props.handleGuess(this.props.answer);
+        }}
+        className="btn btn-outline-primary"
       >
         {decodeHTML(this.props.answer)}
       </button>
